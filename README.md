@@ -2,7 +2,9 @@
 
 Download
 
-```go get github.com/rhydderchc/btbgo```
+```
+go get github.com/rhydderchc/btbgo
+```
 
 ## How it works
 
