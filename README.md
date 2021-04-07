@@ -23,13 +23,19 @@ log.Println(btbgo.madlibs(authToken))
 ```
 ## Endpoints
 o /meme -> `btb.meme`
+
 o /madlibs -> `btb.madlibs`
+
 o /text -> `btb.text`
+
 o /word -> `btb.word`
+
 
 **Un implemented yet**
 o /lyrics -> `btb.lyrics`
+
 o /subreddit -> `btb.subreddit`
+
 ## TODOS
 
-[] Complete the lyrics and reddit endpoints
+[X] Complete the lyrics and reddit endpoints
