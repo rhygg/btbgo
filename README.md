@@ -15,10 +15,8 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
-	"io/ioutil"
 	"log"
-	"net/http"
+	"github.com/rhydderchc/btbgo"
 )
 type MadlibsImplement struct {
 	Title string `json:"title"`
@@ -28,9 +26,9 @@ type MadlibsImplement struct {
 func main() {
 	var token string = "YOUR_API_TOKEN"
 getTitle := MadlibsImplement{}
-	err := json.Unmarshal(madlibs(token), &getTitle)
+	err := json.Unmarshal(btbgo.Madlibs(token), &getTitle)
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 		return
 	}
 log.Println(getTitle.Title)
