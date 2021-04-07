@@ -41,20 +41,20 @@ log.Println(getTitle.Title)
 }
 ```
 ## Endpoints
-o /meme -> `btb.meme`
+ /meme -> `btb.Meme`
 
-o /madlibs -> `btb.madlibs`
+ /madlibs -> `btb.Madlibs`
 
-o /text -> `btb.text`
+ /text -> `btb.Text`
 
-o /word -> `btb.word`
+ /word -> `btb.Word`
 
 
 **Un-implemented yet**
 
-o /lyrics -> `btb.lyrics`
+ /lyrics -> `btb.Lyrics`
 
-o /subreddit -> `btb.subreddit`
+ /subreddit -> `btb.Subreddit`
 
 ## TODOS
 
