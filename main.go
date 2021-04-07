@@ -14,7 +14,7 @@ import (
 }
 
  */
-	func speedType(AuthToken string) string{
+	func speedType(AuthToken string) []byte{
 		var url string = "https://api.bytestobits.dev/text"
 		client := &http.Client{}
 		req, _ := http.NewRequest("GET", url, nil)
@@ -28,11 +28,13 @@ import (
 		if err != nil {
 			log.Fatalln(err)
 		}
-		return string(body)
+		textByte :=[]byte(body)
+
+		return textByte
 
 
 	}
-func madlibs(AuthToken string) string{
+func madlibs(AuthToken string) []byte{
 	var url string = "https://api.bytestobits.dev/madlibs"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
@@ -46,11 +48,13 @@ func madlibs(AuthToken string) string{
 	if err != nil {
 		log.Fatalln(err)
 	}
-	return string(body)
+	textByte :=[]byte(body)
+
+		return textByte
 
 
 }
-func lyrics(AuthToken string, song string) string{
+func lyrics(AuthToken string, song string) []byte{
 	var url string = "https://api.bytestobits.dev/lyrics+song="+song
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
@@ -64,11 +68,13 @@ func lyrics(AuthToken string, song string) string{
 	if err != nil {
 		log.Fatalln(err)
 	}
-	return string(body)
+	textByte :=[]byte(body)
+
+		return textByte
 
 
 }
-func meme(AuthToken string) string{
+func meme(AuthToken string) []byte{
 	var url string = "https://api.bytestobits.dev/meme"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
@@ -82,11 +88,13 @@ func meme(AuthToken string) string{
 	if err != nil {
 		log.Fatalln(err)
 	}
-	return string(body)
+	textByte :=[]byte(body)
+
+		return textByte
 
 
 }
-func word(AuthToken string) string{
+func word(AuthToken string) []byte{
 	var url string = "https://api.bytestobits.dev/reddit"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
@@ -100,11 +108,13 @@ func word(AuthToken string) string{
 	if err != nil {
 		log.Fatalln(err)
 	}
-	return string(body)
+	textByte :=[]byte(body)
+
+		return textByte
 
 
 }
-func reddit(AuthToken string, query string, limit int) string{
+func reddit(AuthToken string, query string, limit int) []byte{
 	var url string = "https://api.bytestobits.dev/reddit"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
@@ -118,6 +128,7 @@ func reddit(AuthToken string, query string, limit int) string{
 	if err != nil {
 		log.Fatalln(err)
 	}
-	return string(body)
+	textByte :=[]byte(body)
+	return textByte
 
 }
