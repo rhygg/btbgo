@@ -1,5 +1,9 @@
 # Bytes To Bits Api wrapper for golang
 
+Download
+
+```go get github.com/rhydderchc/btbgo```
+
 ## How it works
 
 **Go** over to [the bytestobits api](api.bytestobits.dev/) page and [create](api.bytestobits.dev/account) an account, and get an api authentication token.
