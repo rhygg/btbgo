@@ -9,16 +9,31 @@
 
 **A pretty example of how you can use the wrapper**
 
+Say you want to get the title from the **madlibs** endpoint.
 ```go
 package main
-import(
-"log"
-"github.com/rhydderchc/btbgo"
+
+import (
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
 )
-func main(){
-var authToken string = "YOUR AUTH_TOKEN"
-log.Println(btbgo.text(authToken))
-log.Println(btbgo.madlibs(authToken))
+type MadlibsImplement struct {
+	Title string `json:"title"`
+}
+
+
+func main() {
+	var token string = "YOUR_API_TOKEN"
+getTitle := MadlibsImplement{}
+	err := json.Unmarshal(madlibs(token), &getTitle)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+log.Println(getTitle.Title)
 }
 ```
 ## Endpoints
@@ -31,7 +46,8 @@ o /text -> `btb.text`
 o /word -> `btb.word`
 
 
-**Un implemented yet**
+**Un-implemented yet**
+
 o /lyrics -> `btb.lyrics`
 
 o /subreddit -> `btb.subreddit`
