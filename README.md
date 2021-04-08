@@ -12,7 +12,10 @@ go get github.com/rhydderchc/btbgo
 
 ## Features
 One time authentication!
+
 use `RegisterToken` once and then use all the api functions without any problem!
+
+
 use all the apis for incredible development!
 
 ### What's next?
