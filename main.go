@@ -12,10 +12,14 @@ func RegisterToken(auth) string{
 	authTok = auth
 	return authTok
 }
-	func SpeedType(AuthToken string) []byte{
+	func Text(AuthToken string) []byte{
 		var url string = "https://api.bytestobits.dev/text"
 		client := &http.Client{}
 		req, _ := http.NewRequest("GET", url, nil)
+		if len(authTok) == 0{
+			log.Fatalln("The authentication token was not provided")
+			return nil
+		}
 		req.Header.Set("authorization", authTok)
 		res, err := client.Do(req)
 		if err!=nil {
@@ -36,6 +40,10 @@ func Madlibs(AuthToken string) []byte{
 	var url string = "https://api.bytestobits.dev/madlibs"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
+	if len(authTok) == 0{
+			log.Fatalln("The authentication token was not provided")
+			return nil
+		}
 	req.Header.Set("authorization", authTok)
 	res, err := client.Do(req)
 	if err!=nil {
@@ -56,6 +64,10 @@ func Lyrics(AuthToken string, song string) []byte{
 	var url string = "https://api.bytestobits.dev/lyrics+song="+song
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
+	if len(authTok) == 0{
+			log.Fatalln("The authentication token was not provided")
+			return nil
+		}
 	req.Header.Set("authorization", authTok)
 	res, err := client.Do(req)
 	if err!=nil {
@@ -76,6 +88,10 @@ func Meme(AuthToken string) []byte{
 	var url string = "https://api.bytestobits.dev/meme"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
+	if len(authTok) == 0{
+			log.Fatalln("The authentication token was not provided")
+			return nil
+		}
 	req.Header.Set("authorization", authTok)
 	res, err := client.Do(req)
 	if err!=nil {
@@ -96,6 +112,10 @@ func Word(AuthToken string) []byte{
 	var url string = "https://api.bytestobits.dev/reddit"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
+	if len(authTok) == 0{
+			log.Fatalln("The authentication token was not provided")
+			return nil
+		}
 	req.Header.Set("authorization", authTok)
 	res, err := client.Do(req)
 	if err!=nil {
@@ -116,6 +136,10 @@ func Reddit(AuthToken string, query string, limit int) []byte{
 	var url string = "https://api.bytestobits.dev/reddit"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
+	if len(authTok) == 0{
+			log.Fatalln("The authentication token was not provided")
+			return nil
+		}
 	req.Header.Set("authorization", authTok)
 	res, err := client.Do(req)
 	if err!=nil {
