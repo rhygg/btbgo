@@ -49,6 +49,8 @@ btbgo.registerToken(token)
 log.Println(getTitle.Title)
 }
 ```
+Returns **the title of the madlibs game**
+```Personal Ad```
 ## Endpoints
  /meme -> `btb.Meme`
 
