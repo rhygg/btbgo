@@ -50,7 +50,11 @@ log.Println(getTitle.Title)
 }
 ```
 Returns **the title of the madlibs game**
-```Personal Ad```
+
+```
+Personal Ad
+
+```
 ## Endpoints
  /meme -> `btb.Meme`
 
