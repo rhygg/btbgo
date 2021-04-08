@@ -6,19 +6,17 @@ import (
 	"net/http"
 )
 
-/*func main() {
-	var token string = "oO17.WHFrSanuzvxVwFXljBW4"
-    var song string= "What's+next"
-	log.Println(speedType(token))
-	log.Println(madlibs(token))
-}
+var authTok string
 
- */
+func RegisterToken(auth) string{
+	authTok = auth
+	return authTok
+}
 	func SpeedType(AuthToken string) []byte{
 		var url string = "https://api.bytestobits.dev/text"
 		client := &http.Client{}
 		req, _ := http.NewRequest("GET", url, nil)
-		req.Header.Set("authorization", AuthToken)
+		req.Header.Set("authorization", authTok)
 		res, err := client.Do(req)
 		if err!=nil {
 			log.Fatalln(err)
@@ -38,7 +36,7 @@ func Madlibs(AuthToken string) []byte{
 	var url string = "https://api.bytestobits.dev/madlibs"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
-	req.Header.Set("authorization", AuthToken)
+	req.Header.Set("authorization", authTok)
 	res, err := client.Do(req)
 	if err!=nil {
 		log.Fatalln(err)
@@ -58,7 +56,7 @@ func Lyrics(AuthToken string, song string) []byte{
 	var url string = "https://api.bytestobits.dev/lyrics+song="+song
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
-	req.Header.Set("authorization", AuthToken)
+	req.Header.Set("authorization", authTok)
 	res, err := client.Do(req)
 	if err!=nil {
 		log.Fatalln(err)
@@ -78,7 +76,7 @@ func Meme(AuthToken string) []byte{
 	var url string = "https://api.bytestobits.dev/meme"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
-	req.Header.Set("authorization", AuthToken)
+	req.Header.Set("authorization", authTok)
 	res, err := client.Do(req)
 	if err!=nil {
 		log.Fatalln(err)
@@ -98,7 +96,7 @@ func Word(AuthToken string) []byte{
 	var url string = "https://api.bytestobits.dev/reddit"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
-	req.Header.Set("authorization", AuthToken)
+	req.Header.Set("authorization", authTok)
 	res, err := client.Do(req)
 	if err!=nil {
 		log.Fatalln(err)
@@ -118,7 +116,7 @@ func Reddit(AuthToken string, query string, limit int) []byte{
 	var url string = "https://api.bytestobits.dev/reddit"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
-	req.Header.Set("authorization", AuthToken)
+	req.Header.Set("authorization", authTok)
 	res, err := client.Do(req)
 	if err!=nil {
 		log.Fatalln(err)
