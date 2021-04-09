@@ -12,7 +12,7 @@ func RegisterToken(auth) string{
 	authTok = auth
 	return authTok
 }
-	func Text(AuthToken string) []byte{
+	func Text() []byte{
 		var url string = "https://api.bytestobits.dev/text"
 		client := &http.Client{}
 		req, _ := http.NewRequest("GET", url, nil)
@@ -36,7 +36,7 @@ func RegisterToken(auth) string{
 
 
 	}
-func Madlibs(AuthToken string) []byte{
+func Madlibs() []byte{
 	var url string = "https://api.bytestobits.dev/madlibs"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
@@ -60,7 +60,7 @@ func Madlibs(AuthToken string) []byte{
 
 
 }
-func Lyrics(AuthToken string, song string) []byte{
+func Lyrics(song string) []byte{
 	var url string = "https://api.bytestobits.dev/lyrics+song="+song
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
@@ -84,7 +84,7 @@ func Lyrics(AuthToken string, song string) []byte{
 
 
 }
-func Meme(AuthToken string) []byte{
+func Meme() []byte{
 	var url string = "https://api.bytestobits.dev/meme"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
@@ -108,7 +108,7 @@ func Meme(AuthToken string) []byte{
 
 
 }
-func Word(AuthToken string) []byte{
+func Word() []byte{
 	var url string = "https://api.bytestobits.dev/reddit"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
@@ -132,8 +132,8 @@ func Word(AuthToken string) []byte{
 
 
 }
-func Reddit(AuthToken string, query string, limit int) []byte{
-	var url string = "https://api.bytestobits.dev/reddit"
+func Reddit(query string) []byte{
+	var url string = "https://api.bytestobits.dev/reddit?subreddit="+query
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
 	if len(authTok) == 0{
