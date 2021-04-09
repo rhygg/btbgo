@@ -50,7 +50,7 @@ log.Println(getTitle.Title)
 log.Println(string(btbgo.text())) 
 }
 ```
-Returns **the title of the madlibs game**
+Returns **the title of the madlibs game and the text that we requested!**
 
 ```
 Personal Ad
