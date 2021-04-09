@@ -54,6 +54,7 @@ Returns **the title of the madlibs game**
 
 ```
 Personal Ad
+"Do you understand the expense people went through to keep you locked up in that tower? You think people like that are just gonna let you walk away? You are an investment and you will not be safe until you are far away from here."
 
 ```
 ## Endpoints
