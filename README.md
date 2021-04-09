@@ -47,6 +47,7 @@ btbgo.registerToken(token)
 		return
 	}
 log.Println(getTitle.Title)
+log.Println(string(btbgo.text())) 
 }
 ```
 Returns **the title of the madlibs game**
