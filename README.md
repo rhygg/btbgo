@@ -47,7 +47,8 @@ btbgo.registerToken(token)
 		return
 	}
 log.Println(getTitle.Title)
-log.Println(string(btbgo.text())) 
+log.Println(string(btbgo.Text())) 
+log.Println(string(btbgo.Lyrics("Whats+next")))
 }
 ```
 Returns **the title of the madlibs game and the text that we requested!**
@@ -58,25 +59,18 @@ Personal Ad
 
 ```
 ## Endpoints
- /meme -> `btb.Meme`
+ /meme -> `btb.Meme()`
 
- /madlibs -> `btb.Madlibs`
+ /madlibs -> `btb.Madlibs()`
 
- /text -> `btb.Text`
+ /text -> `btb.Text()`
 
- /word -> `btb.Word`
+ /word -> `btb.Word()`
 
+ /lyrics -> `btb.Lyrics(songname)`
 
-**Un-implemented yet**
-
- /lyrics -> `btb.Lyrics`
-
- /subreddit -> `btb.Subreddit`
+ /reddit -> `btb.Reddit(subredditname)`
  
-
-## TODOS
-
-[X] Complete the lyrics and reddit endpoints
 
 # Understanding the wrapper
 
