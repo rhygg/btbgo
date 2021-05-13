@@ -1,4 +1,4 @@
-package btbgo
+package btb
 
 import (
 	"io/ioutil"
