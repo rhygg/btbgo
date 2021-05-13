@@ -84,6 +84,29 @@ func Lyrics(song string) []byte{
 
 
 }
+func LyricsWithArtist(song string, artist string) []byte{
+		var url string = "https://api.bytestobits.dev/lyrics+song="+song+"&artist="+artist
+	client := &http.Client{}
+	req, _ := http.NewRequest("GET", url, nil)
+	if len(authTok) == 0{
+			log.Fatalln("The authentication token was not provided")
+			return nil
+		}
+	req.Header.Set("authorization", authTok)
+	res, err := client.Do(req)
+	if err!=nil {
+		log.Fatalln(err)
+
+	}
+	body, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	textByte :=[]byte(body)
+
+		return textByte		
+	
+}
 func Meme() []byte{
 	var url string = "https://api.bytestobits.dev/meme"
 	client := &http.Client{}
