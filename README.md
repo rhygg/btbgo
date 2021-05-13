@@ -1,4 +1,4 @@
-# Bytes To Bits Api wrapper for golang
+# Bytes To Bits Api wrapper in golang
 
 Download
 
