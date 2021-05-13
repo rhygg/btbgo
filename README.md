@@ -67,7 +67,7 @@ Personal Ad
 
  /word -> `btb.Word()`
 
- /lyrics -> `btb.Lyrics(songname)`
+ /lyrics -> `btb.Lyrics(songname) || btb.LyricsWithArtist(songname, artist)`
 
  /reddit -> `btb.Reddit(subredditname)`
  
