@@ -41,14 +41,14 @@ func main() {
 	var token string = "YOUR_API_TOKEN"
 getTitle := MadlibsImplement{}
 btbgo.registerToken(token)
-	err := json.Unmarshal(btbgo.Madlibs(), &getTitle)
+	err := json.Unmarshal(btb.Madlibs(), &getTitle)
 	if err != nil {
 		log.Println(err)
 		return
 	}
 log.Println(getTitle.Title)
-log.Println(string(btbgo.Text())) 
-log.Println(string(btbgo.Lyrics("Whats+next")))
+log.Println(string(btb.Text())) 
+log.Println(string(btb.Lyrics("Whats+next")))
 }
 ```
 Returns **the title of the madlibs game and the text that we requested!**
@@ -84,7 +84,7 @@ import(
 )
 func main(){
 btbgo.RegisterToken("YOUR_TOKEN")
-fmt.Println(string(btbgo.text()))
+fmt.Println(string(btb.text()))
 }
 ```
 Returns
@@ -99,8 +99,8 @@ import(
 "github.com/rhydderchc/btbgo"
 )
 func main(){
-btbgo.RegisterToken("YOUR_TOKEN")
-fmt.Println(btbgo.text())
+btb.RegisterToken("YOUR_TOKEN")
+fmt.Println(btb.text())
 }
 ```
 Returns
