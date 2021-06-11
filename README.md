@@ -41,7 +41,7 @@ type MadlibsImplement struct {
 func main() {
 	var token string = "YOUR_API_TOKEN"
 getTitle := MadlibsImplement{}
-btbgo.registerToken(token)
+btbgo.RegisterToken(token)
 	err := json.Unmarshal(btb.Madlibs(), &getTitle)
 	if err != nil {
 		log.Println(err)
