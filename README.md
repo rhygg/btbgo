@@ -66,7 +66,7 @@ Personal Ad
 
  /text -> `btb.Text()`
 
- /word -> `btb.Word()`
+ /word -> `btb.GetWord()`
 
  /lyrics -> `btb.Lyrics(songname) || btb.LyricsWithArtist(songname, artist)`
 
