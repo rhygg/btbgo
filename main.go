@@ -131,7 +131,7 @@ func Meme() []byte{
 
 
 }
-func Word() []byte{
+func GetWord() []byte{
 	var url string = "https://api.bytestobits.dev/reddit"
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", url, nil)
